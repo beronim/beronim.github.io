@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>배현종 포트폴리오 · 솔루션 기획 · 제조 AX · PM</title>
+<meta name="description" content="20년 8개월 IT/SI 서비스 기획, 팀장 이상 리더 13년, 국책 R&D 리더 3건. 철강 그룹 계열사에서 스마트팩토리 국책과제 제안에 참여한 솔루션 기획 리더 배현종의 포트폴리오.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: jcoretech 톤(흰 바탕 · 네이비 잉크 · 스카이→블루 그라데이션) 위에 번호 매긴 섹션, 경력은 간트 차트, 전환점은 마일스톤 다이아몬드 */
+:root{
+  --paper:#FFFFFF;
+  --paper-2:#F7FAFC;
+  --surface:#FFFFFF;
+  --ink:#0E1E33;
+  --muted:#3D4D63;
+  --dim:#7B879A;
+  --line:rgba(14,30,51,.10);
+  --accent:#1F7BC4;
+  --accent-soft:#EAF3FA;
+  --milestone:#5BC0E8;
+  --navy:#0E1E33;
+  --grad:linear-gradient(135deg,#5BC0E8 0%,#2E94D5 50%,#1F7BC4 100%);
+  --hero-bg:radial-gradient(at 80% 20%,rgba(91,192,232,.32) 0%,transparent 55%),radial-gradient(at 10% 90%,rgba(31,123,196,.18) 0%,transparent 55%),linear-gradient(180deg,#F2F8FD 0%,#FFFFFF 100%);
+  --font-display:"Montserrat","Noto Sans KR",-apple-system,sans-serif;
+  --font-body:"Noto Sans KR","Montserrat",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --font-mono:"Montserrat","Noto Sans KR",-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B1626;--paper-2:#0E1E33;--surface:#132840;--ink:#EAF1F8;--muted:#B4C2D3;--dim:#7F90A6;--line:rgba(234,241,248,.12);
+    --accent:#5BC0E8;--accent-soft:#16304D;--milestone:#5BC0E8;--navy:#07101C;
+    --hero-bg:radial-gradient(at 80% 20%,rgba(91,192,232,.18) 0%,transparent 55%),radial-gradient(at 10% 90%,rgba(31,123,196,.22) 0%,transparent 55%),#0B1626;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0B1626;--paper-2:#0E1E33;--surface:#132840;--ink:#EAF1F8;--muted:#B4C2D3;--dim:#7F90A6;--line:rgba(234,241,248,.12);
+  --accent:#5BC0E8;--accent-soft:#16304D;--milestone:#5BC0E8;--navy:#07101C;
+  --hero-bg:radial-gradient(at 80% 20%,rgba(91,192,232,.18) 0%,transparent 55%),radial-gradient(at 10% 90%,rgba(31,123,196,.22) 0%,transparent 55%),#0B1626;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  background-color:var(--paper);
+  color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;word-break:keep-all;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 14px;z-index:100}
+.skip:focus{left:16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+@media (max-width:480px){.wrap{padding:0 16px}}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 85%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.logo b{font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo span{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--dim);letter-spacing:.1em}
+.nav ul{list-style:none;display:flex;gap:4px}
+.nav ul a{text-decoration:none;font-size:14px;color:var(--muted);padding:6px 10px;border-radius:4px}
+.nav ul a{font-weight:500}
+.nav ul a:hover{color:var(--accent);background:var(--accent-soft)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);width:40px;height:36px;border-radius:4px;font-size:18px;cursor:pointer}
+@media (max-width:880px){
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 16px 16px}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:10px 8px;font-size:15px}
+}
+
+/* ---------- common ---------- */
+section{padding:96px 0}
+section:nth-of-type(even){background:var(--paper-2)}
+.sec-head{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:44px;align-items:start}
+.sec-no{font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--accent);padding-top:10px;letter-spacing:.04em}
+.sec-no small{display:block;color:var(--dim);font-size:11px;font-weight:600;letter-spacing:.16em;margin-top:2px}
+h2{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.6vw,36px);line-height:1.35;text-wrap:balance;letter-spacing:-.03em}
+h2 em,h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);margin-top:12px;max-width:62ch}
+@media (max-width:640px){.sec-head{grid-template-columns:1fr;gap:6px}.sec-no{padding-top:0}section{padding:64px 0}}
+.label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 1px 2px rgba(14,30,51,.04)}
+h3{font-size:19px;font-weight:700;line-height:1.45;text-wrap:balance}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 80px;background:var(--hero-bg)}
+.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:40px}}
+.eyebrow{font-family:var(--font-body);font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.04em;display:inline-flex;align-items:center;gap:10px;background:color-mix(in srgb,var(--surface) 78%,transparent);border:1px solid var(--line);padding:8px 18px;border-radius:999px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1.25;margin:22px 0 26px;text-wrap:balance;letter-spacing:-.035em}
+.hero-points{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+.hero-points li{display:grid;grid-template-columns:28px 1fr;color:var(--ink)}
+.hero-points li::before{content:counter(hp,decimal-leading-zero);counter-increment:hp;font-family:var(--font-mono);font-size:12px;color:var(--accent);padding-top:4px}
+.hero-points{counter-reset:hp}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.tag{font-size:13px;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 80%,transparent);padding:5px 14px;border-radius:999px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:14px 26px;border-radius:999px;border:1px solid var(--line-strong,rgba(14,30,51,.2));transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 20px rgba(31,123,196,.28)}
+.btn.primary:hover{box-shadow:0 12px 26px rgba(31,123,196,.36)}
+.btn.ghost{background:var(--surface);color:var(--ink)}
+
+/* charter card */
+.charter{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(31,123,196,.14)}
+.charter-top{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:var(--grad)}
+.charter-top .label{color:#fff}
+.charter-top .status{color:#fff}
+.charter-top .status::before{background:#fff}
+.charter dl{display:grid;grid-template-columns:1fr 1fr}
+.charter dl div{padding:20px 22px;border-bottom:1px solid var(--line)}
+.charter dl div:nth-child(odd){border-right:1px solid var(--line)}
+.charter dt{font-size:13px;color:var(--muted)}
+.charter dd{font-family:var(--font-mono);font-weight:800;font-size:30px;letter-spacing:-.02em;color:var(--accent);line-height:1.2;margin-top:6px;font-variant-numeric:tabular-nums}
+.charter dd small{font-family:var(--font-body);font-size:14px;font-weight:500;color:var(--muted);margin-left:2px}
+.charter-foot{padding:16px 22px;font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:12px;color:var(--accent)}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+
+/* ---------- about ---------- */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.principles{grid-template-columns:1fr}}
+.principles .label{color:var(--accent);margin-bottom:14px;display:block}
+.principles p{color:var(--muted);margin-top:10px;font-size:15px}
+blockquote{margin-top:40px;padding:30px 34px;border-left:4px solid var(--accent);border-radius:0 16px 16px 0;background:var(--accent-soft);font-family:var(--font-display);font-size:clamp(19px,2.2vw,24px);font-weight:700;line-height:1.55;letter-spacing:-.02em}
+blockquote cite{display:block;font-family:var(--font-mono);font-style:normal;font-size:12px;font-weight:400;color:var(--muted);margin-top:12px;letter-spacing:.06em}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden}
+.flow li{list-style:none;padding:24px 22px;border-right:1px solid var(--line);position:relative}
+.flow li:last-child{border-right:0}
+.flow .step{font-family:var(--font-mono);font-size:12px;color:var(--accent)}
+.flow h4{font-size:17px;margin:6px 0 8px}
+.flow p{font-size:14px;color:var(--muted);line-height:1.6}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-7px;top:30px;width:12px;height:12px;background:var(--surface);border-top:1px solid var(--line);border-right:1px solid var(--line);transform:rotate(45deg);z-index:1}
+@media (max-width:820px){.flow{grid-template-columns:1fr 1fr}.flow li:nth-child(2){border-right:0}.flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}.flow li::after{display:none}}
+@media (max-width:480px){.flow{grid-template-columns:1fr}.flow li{border-right:0;border-bottom:1px solid var(--line)}.flow li:last-child{border-bottom:0}}
+
+/* ---------- manufacturing focus ---------- */
+.group-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:28px;padding:18px 24px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.group-bar .label{color:var(--accent)}
+.group-bar .co{font-weight:700;font-size:15px;padding:6px 16px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+.group-bar .co.me{background:var(--grad);color:#fff}
+.group-bar i{font-style:normal;color:var(--dim);font-family:var(--font-mono);font-size:13px}
+.group-bar p{flex-basis:100%;font-size:14px;color:var(--muted)}
+.know{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.know{grid-template-columns:1fr}}
+.know .label{color:var(--accent);display:block;margin-bottom:12px}
+.know p{color:var(--muted);font-size:15px;margin-top:10px}
+.sub-head{display:flex;align-items:baseline;gap:14px;margin:56px 0 16px;flex-wrap:wrap}
+.sub-head h3{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-.02em}
+.sub-head p{font-size:14px;color:var(--muted);flex-basis:100%}
+.stack{display:grid;grid-template-columns:repeat(5,1fr);border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.stack li{list-style:none;padding:22px 18px;border-right:1px solid var(--line);position:relative}
+.stack li:last-child{border-right:0;background:var(--grad);color:#fff}
+.stack li:last-child .lv,.stack li:last-child p{color:rgba(255,255,255,.88)}
+.stack .lv{font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--accent)}
+.stack h4{font-size:16px;margin:6px 0 8px;line-height:1.4}
+.stack p{font-size:13px;color:var(--muted);line-height:1.6}
+@media (max-width:900px){.stack{grid-template-columns:1fr}.stack li{border-right:0;border-bottom:1px solid var(--line)}.stack li:last-child{border-bottom:0}}
+.ax-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:900px){.ax-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ax-grid{grid-template-columns:1fr}}
+.ax{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.ax .no{font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700}
+.ax h4{font-size:16px;margin:4px 0 6px}
+.ax p{font-size:14px;color:var(--muted);line-height:1.6}
+.ax .kpi{display:inline-block;margin-top:10px;font-size:12px;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- competencies ---------- */
+.comp{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.comp{grid-template-columns:1fr}}
+.comp .card{display:grid;grid-template-rows:auto auto 1fr auto;gap:12px}
+.comp .code{font-family:var(--font-mono);font-size:12px;color:var(--accent)}
+.comp ul{list-style:none;display:grid;gap:6px;font-size:15px}
+.comp li{padding-left:16px;position:relative}
+.comp li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:1px;background:var(--muted)}
+.comp .effect{font-size:14px;border-top:1px dashed var(--line);padding-top:12px;color:var(--muted)}
+.comp .effect b{color:var(--ink);font-weight:600}
+.method{margin-top:40px}
+.method-head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
+.method-head h3{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-.02em}
+.method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.method-grid{grid-template-columns:1fr}}
+.m-card{position:relative;border-radius:16px;padding:30px;background:var(--grad);color:#fff;overflow:hidden;box-shadow:0 14px 34px rgba(31,123,196,.22)}
+.m-card.dark{background:radial-gradient(at 90% 0%,rgba(91,192,232,.35) 0%,transparent 55%),var(--navy)}
+.m-card .k{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.16em;opacity:.8}
+.m-card .big{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,5vw,60px);line-height:1;letter-spacing:-.04em;margin:14px 0 8px}
+.m-card .big small{font-size:.36em;font-weight:700;margin-left:6px;letter-spacing:-.01em}
+.m-card h4{font-size:19px;font-weight:700;margin-bottom:12px}
+.m-card ul{list-style:none;display:grid;gap:6px;font-size:15px;opacity:.92}
+.m-card li::before{content:"✓ ";font-weight:700}
+
+/* ---------- evidence ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.stat{padding:28px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .num{font-family:var(--font-mono);font-size:clamp(34px,4vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.stat .num small{font-size:.42em;color:var(--dim);-webkit-text-fill-color:var(--dim);font-family:var(--font-body);font-weight:500;margin-left:3px}
+.stat p{font-size:14px;color:var(--muted);margin-top:10px}
+@media (max-width:820px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.roles{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:760px){.roles{grid-template-columns:1fr}}
+.roles .card{padding:22px 24px}
+.roles .label{display:block;margin-bottom:6px}
+.roles p{font-size:15px}
+
+/* ---------- R&D ---------- */
+.rnd{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.rnd{grid-template-columns:1fr}}
+.rnd .card{display:flex;flex-direction:column;gap:14px;position:relative;padding-top:32px}
+.role-badge{position:absolute;top:-1px;left:28px;background:var(--grad);color:#fff;font-weight:700;font-family:var(--font-mono);font-size:12px;padding:4px 10px;border-radius:0 0 4px 4px;letter-spacing:.04em}
+.rnd .meta{font-size:13px;color:var(--muted);font-family:var(--font-mono)}
+.rnd ul{list-style:none;font-size:15px;color:var(--muted);display:grid;gap:6px;margin-top:auto}
+.rnd li::before{content:"→ ";color:var(--accent)}
+.rnd-extra{margin-top:16px;display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:start}
+.rnd-extra ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.rnd-extra li{font-size:14px;background:var(--surface);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+@media (max-width:640px){.rnd-extra{grid-template-columns:1fr;gap:10px}}
+.dt-box{margin-top:48px;display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:start}
+.dt-box h3{font-family:var(--font-display);font-size:24px;font-weight:800}
+.dt-box p{color:var(--muted);margin-top:10px;font-size:15px}
+.dt-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;list-style:none}
+.dt-list li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;display:grid;grid-template-columns:30px 1fr}
+.dt-list li span{font-family:var(--font-mono);font-size:12px;color:var(--accent);padding-top:3px}
+@media (max-width:820px){.dt-box{grid-template-columns:1fr}.dt-list{grid-template-columns:1fr}}
+
+/* ---------- projects ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{font:inherit;font-size:14px;background:var(--surface);color:var(--muted);border:1px solid var(--line);padding:8px 16px;border-radius:999px;cursor:pointer}
+.filters button:hover{color:var(--ink);border-color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:#fff}
+.filters .cnt{font-family:var(--font-mono);font-size:12px;margin-left:6px;opacity:.7}
+.proj-table{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.proj-row{display:grid;grid-template-columns:56px 1fr 150px 110px;gap:16px;align-items:center;padding:14px 22px;border-bottom:1px solid var(--line)}
+.proj-row:last-child{border-bottom:0}
+.proj-row.head{background:var(--accent-soft);font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--accent);padding-top:10px;padding-bottom:10px}
+.proj-row .idx{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.proj-row .name{font-weight:500}
+.proj-row .cat{font-size:13px;color:var(--muted)}
+.role-chip{justify-self:start;font-family:var(--font-mono);font-size:12px;padding:2px 8px;border-radius:3px;border:1px solid var(--line);color:var(--muted)}
+.role-chip.pm{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.proj-row[hidden]{display:none}
+@media (max-width:640px){.proj-row{grid-template-columns:40px 1fr auto}.proj-row .cat{display:none}.proj-row.head .h-cat{display:none}}
+
+/* ---------- career gantt ---------- */
+.gantt-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.gantt{min-width:760px;padding:20px 22px 24px;position:relative}
+.g-axis,.g-row{display:grid;grid-template-columns:190px 1fr;align-items:center}
+.g-axis .ticks{position:relative;height:22px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.g-axis .ticks span{position:absolute;transform:translateX(-50%);top:0}
+.g-row{min-height:52px;border-top:1px solid var(--line)}
+.g-name{font-size:14px;font-weight:600;line-height:1.35;padding-right:12px}
+.g-name small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.g-track{position:relative;height:52px;background-image:repeating-linear-gradient(90deg,transparent 0,transparent calc(var(--yr) - 1px),var(--line) calc(var(--yr) - 1px),var(--line) var(--yr))}
+.g-bar{position:absolute;top:15px;height:22px;border-radius:999px;background:var(--grad);transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+.g-bar.lead{background:var(--navy)}
+:root[data-theme="dark"] .g-bar.lead{background:#2E94D5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .g-bar.lead{background:#2E94D5}}
+.g-bar.now{background:linear-gradient(90deg,var(--navy),#1F7BC4 70%,#5BC0E8)}
+.g-bar span{position:absolute;left:14px;top:2px;font-weight:600;font-family:var(--font-mono);font-size:11px;color:#fff;white-space:nowrap}
+.g-ms{position:absolute;top:19px;width:14px;height:14px;background:var(--milestone);box-shadow:0 0 0 1px var(--accent);transform:translateX(-50%) rotate(45deg);border:2px solid var(--surface);z-index:2}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.g-legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font-size:13px;color:var(--muted)}
+.g-legend i{display:inline-block;width:14px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.g-legend i.d{width:10px;height:10px;transform:rotate(45deg);background:var(--milestone);border-radius:0}
+
+.timeline{margin-top:40px;display:grid;gap:12px}
+.t-item{display:grid;grid-template-columns:170px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 26px}
+.t-when{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.t-when b{display:block;color:var(--accent);font-weight:500;margin-top:4px}
+.t-item h3{font-size:18px}
+.t-item h3 span{font-size:14px;font-weight:500;color:var(--muted);margin-left:8px}
+.t-item p{font-size:15px;color:var(--muted);margin-top:4px}
+.t-item .duty{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.t-item .duty span{font-size:12px;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (max-width:640px){.t-item{grid-template-columns:1fr;gap:8px;padding:20px}}
+
+/* ---------- tools & AI ---------- */
+.tools-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+@media (max-width:820px){.tools-grid{grid-template-columns:1fr}}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0 18px}
+.chain span{font-size:14px;font-weight:600;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--accent-soft)}
+.chain i{font-style:normal;color:var(--muted);font-family:var(--font-mono)}
+.chain span.ai{background:var(--grad);color:#fff;border-color:transparent}
+.tools-grid p{color:var(--muted);font-size:15px}
+.toolset{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.toolset div{border:1px solid var(--line);border-radius:12px;padding:12px;font-size:14px;font-weight:500;text-align:center}
+.ai-tools{grid-template-columns:repeat(2,1fr)}
+.ai-tools div{padding:18px 12px;font-weight:700;font-family:var(--font-display);font-size:15px}
+.toolset div small{display:block;font-size:11px;color:var(--muted);font-weight:400;font-family:var(--font-mono)}
+
+/* ---------- credentials ---------- */
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.creds{grid-template-columns:1fr}}
+.creds .card{padding:24px}
+.creds .label{display:block;margin-bottom:10px;color:var(--accent)}
+.creds h3{font-size:17px}
+.creds p{font-size:14px;color:var(--muted);margin-top:4px;font-family:var(--font-mono)}
+.creds .sub{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+
+/* ---------- contact ---------- */
+.contact{background:radial-gradient(at 85% 10%,rgba(91,192,232,.22) 0%,transparent 50%),var(--navy)!important;color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+.contact .sec-no{color:var(--milestone)}
+.contact h2{color:#fff;font-size:clamp(30px,4.4vw,48px)}
+.contact h2 em{background:linear-gradient(135deg,#8FD6F2,#5BC0E8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.contact .lead{color:rgba(255,255,255,.7)}
+.mail{display:inline-block;margin-top:28px;font-family:var(--font-mono);font-weight:600;font-size:clamp(18px,2.4vw,24px);color:#fff;text-decoration:none;border-bottom:2px solid var(--milestone);padding-bottom:4px}
+.mail:hover{color:var(--milestone)}
+.copy-btn{margin-left:12px;font:inherit;font-size:13px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:6px 14px;border-radius:999px;cursor:pointer;vertical-align:middle}
+.copy-btn:hover{border-color:#fff}
+.cond{border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.04)}
+.cond div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.14);font-size:15px}
+.cond div:last-child{border-bottom:0}
+.cond dt{font-family:var(--font-body);font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.6);padding-top:3px}
+footer{background:var(--navy);color:rgba(255,255,255,.55);font-size:13px;padding:0 0 32px}
+footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--font-mono)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><b>배현종</b><span>SOLUTION PLANNING · MANUFACTURING AX · PM</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav aria-label="주요 섹션">
+      <ul id="menu">
+        <li><a href="#focus">제조 분야</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#competency">핵심 역량</a></li>
+        <li><a href="#evidence">경력 근거</a></li>
+        <li><a href="#rnd">국책 R&amp;D</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#career">경력</a></li>
+        <li><a href="#tools">도구·AI</a></li>
+        <li><a href="#contact">연락</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">솔루션 기획 · 국책 R&amp;D · 제조 AX · 기획 리더</p>
+      <h1>현장의 말을<br><em>솔루션</em>으로 옮기는 <span style="white-space:nowrap">기획 리더</span></h1>
+      <ul class="hero-points">
+        <li>20년 8개월 동안 IT/SI 서비스를 기획했고, 그 가운데 13년은 팀장·대표이사·본부장으로 기획 조직과 사업을 이끌었습니다.</li>
+        <li>철강 제조 그룹(화인베스틸·동일스틸럭스) 계열사 인포인에서 그룹사 스마트팩토리 국책과제의 제안서, 과제 서류, 화면 기획을 맡았고, 제안을 위해 계열사 현장을 직접 확인하고 생산·품질 담당자, 안전관리팀장, 임원진을 인터뷰했습니다.</li>
+        <li>가상환경(디지털 트윈) 실증 연구책임자를 포함한 국책 R&amp;D 리더 3건을 맡아, 과제를 제안부터 실증까지 이끌었습니다.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">솔루션·서비스 기획</span>
+        <span class="tag">스마트팩토리 국책과제 제안</span>
+        <span class="tag">현장 인터뷰·요구사항 도출</span>
+        <span class="tag">디지털 트윈 실증</span>
+        <span class="tag">국책 R&amp;D 제안·수행</span>
+        <span class="tag">기획 조직 리더십</span>
+        <span class="tag">생성형 AI 실무 활용</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#focus">제조 분야 경험 보기 ↓</a>
+        <a class="btn ghost" href="#contact">연락하기</a>
+      </div>
+    </div>
+
+    <aside class="charter" aria-label="경력 요약">
+      <div class="charter-top"><span class="label">Project Charter · 배현종</span><span class="status">재직 중</span></div>
+      <dl>
+        <div><dt>총 경력</dt><dd>20<small>년</small> 8<small>개월</small></dd></div>
+        <div><dt>팀장 이상 리더</dt><dd>13<small>년+</small></dd></div>
+        <div><dt>국책 R&amp;D 리더 역할</dt><dd>3<small>건</small></dd></div>
+        <div><dt>주요 IT/SI 프로젝트</dt><dd>28<small>건</small></dd></div>
+      </dl>
+      <div class="charter-foot">현재 · 인포인 기획팀장(부장) — 서비스 기획, 그룹사 스마트팩토리 국책과제 제안 참여</div>
+    </aside>
+  </div>
+</section>
+
+<!-- 01 MANUFACTURING FOCUS -->
+<section id="focus">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">01 / 09<small>MANUFACTURING</small></p>
+      <div>
+        <h2>철강 현장에서 듣고, <em>제안서</em>로 옮겼습니다</h2>
+        <p class="lead">제가 일하는 인포인은 철강 제조 그룹의 계열사입니다. 그룹사 스마트팩토리 사업에서 저는 국책과제 제안서와 과제 서류 작성, 서비스 화면 기획을 맡았습니다. 제안을 준비하며 계열사 생산 현장을 직접 찾아 공정 상황을 확인하고 생산·품질 담당자, 안전관리팀장, 임원진을 인터뷰했고, 들은 내용을 과제 목표와 화면으로 옮겼습니다. 공정 지식은 지금도 배우는 중이지만, 현장의 말을 기획 문서로 바꾸는 일은 20년 동안 해 온 일입니다.</p>
+      </div>
+    </div>
+
+    <div class="group-bar">
+      <span class="label">Group</span>
+      <span class="co">화인베스틸</span><i>+</i><span class="co">동일스틸럭스</span><i>→</i><span class="co me">인포인 · 스마트팩토리 과제 제안</span>
+      <p>철강 그룹사의 스마트팩토리 국책과제 제안에 참여하며, 서비스 기획의 범위를 제조 분야로 넓히고 있습니다.</p>
+    </div>
+
+    <div class="know">
+      <div class="card">
+        <span class="label">Field · 현장 확인</span>
+        <h3>현장을 직접 보고 들었습니다</h3>
+        <p>국책과제 제안을 위해 철강 계열사 생산 현장을 방문해 공정과 설비 운영 상황을 확인했습니다. 생산·품질 담당자, 안전관리팀장, 임원진을 만나 실무자의 불편과 경영진의 기대를 함께 듣고 요구사항으로 정리했습니다.</p>
+      </div>
+      <div class="card">
+        <span class="label">Proposal · 제안</span>
+        <h3>제안서와 과제 서류를 썼습니다</h3>
+        <p>인터뷰에서 나온 문제를 과제 목표, 추진 내용, 기대효과로 정리해 국책과제 제안서와 과제 서류를 작성했습니다.</p>
+      </div>
+      <div class="card">
+        <span class="label">Screen · 화면 기획</span>
+        <h3>현장이 쓸 화면을 그렸습니다</h3>
+        <p>스마트팩토리 서비스 화면을 기획해, 현장 담당자가 확인할 정보와 업무 흐름을 눈에 보이는 형태로 구체화했습니다.</p>
+      </div>
+    </div>
+
+    <div class="sub-head">
+      <span class="label">Field Case</span><h3>세 계층의 목소리를 하나의 과제로 묶었습니다</h3>
+      <p>현장 인터뷰에서 들은 요구는 계층마다 달랐습니다. 저는 이 차이를 과제에서 풀어야 할 문제로 정리했습니다.</p>
+    </div>
+    <div class="know">
+      <div class="card">
+        <span class="label">Voice · 생산·품질 담당자</span>
+        <h3>“수기 기록이 번거롭고, 자재 수급 현황을 알기 어렵다”</h3>
+        <p><b>풀어야 할 문제</b> · 기록 업무 부담 줄이기, 자재 수급 현황을 한눈에 보기</p>
+      </div>
+      <div class="card">
+        <span class="label">Voice · 안전관리팀장</span>
+        <h3>“안전에 꼭 필요한데, 직원들이 번거로워 도구 도입에 반발한다”</h3>
+        <p><b>풀어야 할 문제</b> · 현장이 거부하지 않는 도구, 도입 필요성에 대한 공감</p>
+      </div>
+      <div class="card">
+        <span class="label">Voice · 임원진</span>
+        <h3>“적은 인력으로 생산성을 높이는 방법이 필요하다”</h3>
+        <p><b>풀어야 할 문제</b> · 투자 효과를 숫자로 보여 주는 과제 목표</p>
+      </div>
+    </div>
+    <div class="m-card" style="margin-top:16px">
+      <span class="k">WHAT I DID</span>
+      <h4 style="margin-top:12px">직원들 앞에서 개선 방향과 필요성을 직접 설명하고, 도입을 이끌었습니다</h4>
+      <ul>
+        <li>실무자가 편해져야 도구가 쓰이고, 도구가 쓰여야 경영진이 원하는 생산성이 나온다고 봤습니다</li>
+        <li>그래서 '관리를 위한 도구'가 아니라 '내 일을 덜어 주는 도구'라는 점부터 설명했습니다</li>
+        <li>현장의 반발을 기획 단계의 요구사항으로 받아들여, 도입 설득까지 기획의 일로 맡았습니다</li>
+      </ul>
+    </div>
+
+    <div class="sub-head">
+      <span class="label">Digital Twin Stack</span><h3>제안을 준비하며 정리한 제조 디지털 트윈 구조</h3>
+      <p>제안서를 쓰며 데이터 수집에서 의사결정까지 디지털 트윈 서비스를 다섯 단계로 정리했습니다.</p>
+    </div>
+    <ol class="stack" aria-label="제조 디지털 트윈 단계">
+      <li><span class="lv">L1</span><h4>현장 데이터 수집</h4><p>설비·센서·PLC와 MES·ERP 데이터 연계</p></li>
+      <li><span class="lv">L2</span><h4>3D 가상 공장</h4><p>공장·라인·설비를 3D로 모델링하고 공정과 연결</p></li>
+      <li><span class="lv">L3</span><h4>실시간 모니터링</h4><p>설비 상태, 생산 현황, 품질 지표를 한 화면에서 확인</p></li>
+      <li><span class="lv">L4</span><h4>시뮬레이션 · AI 예측</h4><p>공정 변경 시뮬레이션, 고장·품질 이상 예측</p></li>
+      <li><span class="lv">L5</span><h4>의사결정 · AX</h4><p>생성형 AI와 연결해 판단·보고·대응을 지원</p></li>
+    </ol>
+
+    <div class="sub-head">
+      <span class="label">Manufacturing AX</span><h3>더 깊이 다루고 싶은 제조 AX 과제 영역</h3>
+      <p>현장 인터뷰와 제안 준비 과정에서 접한 과제들입니다. 솔루션 기획으로 깊게 다루고 싶어 공부하고 있는 영역입니다.</p>
+    </div>
+    <div class="ax-grid">
+      <article class="ax"><span class="no">AX-01</span><h4>설비 예지보전</h4><p>설비 가동 데이터로 고장 징후를 미리 잡아 비계획 정지를 줄입니다.</p><span class="kpi">설비 가동률</span></article>
+      <article class="ax"><span class="no">AX-02</span><h4>AI 품질 검사</h4><p>비전 AI로 제품 표면 결함을 검출하고 검사 이력을 데이터로 남깁니다.</p><span class="kpi">불량률 · 검사 공수</span></article>
+      <article class="ax"><span class="no">AX-03</span><h4>공정·생산계획 최적화</h4><p>디지털 트윈에서 공정 순서와 생산계획을 시뮬레이션해 병목을 찾습니다.</p><span class="kpi">리드타임 · 생산량</span></article>
+      <article class="ax"><span class="no">AX-04</span><h4>야드·물류 관리</h4><p>원소재와 제품의 위치·이동을 가상 공장에서 추적합니다.</p><span class="kpi">재고 정확도 · 이동 시간</span></article>
+      <article class="ax"><span class="no">AX-05</span><h4>에너지·탄소 관리</h4><p>공정별 에너지 사용을 측정하고 절감 시나리오를 비교합니다.</p><span class="kpi">에너지 원단위</span></article>
+      <article class="ax"><span class="no">AX-06</span><h4>현장 안전 · 지식 AX</h4><p>위험 구역을 모니터링하고, 생성형 AI로 작업 표준과 보고 업무를 돕습니다.</p><span class="kpi">사고 · 보고 소요 시간</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- 01 ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">02 / 09<small>ABOUT</small></p>
+      <div>
+        <h2>AX는 기술 도입이 아니라 <em>현장 성과</em>로 끝나야 합니다</h2>
+        <p class="lead">서비스기획자로 시작해 PM, 기획팀장, 대표이사, 본부장을 거쳐 지금은 철강 그룹 계열사에서 스마트팩토리 국책과제 제안과 서비스 기획에 참여하고 있습니다. 제조 AI 과제가 PoC에서 멈추는 이유는 대개 기술보다 '무엇을, 누가, 어떤 지표로' 해낼지가 정해지지 않았기 때문입니다. 저는 그 부분을 끝까지 책임지는 사람입니다.</p>
+      </div>
+    </div>
+
+    <div class="principles">
+      <div class="card">
+        <span class="label">Diagnose · 진단</span>
+        <h3>현장 문제부터 고릅니다</h3>
+        <p>현장을 직접 보고 담당자의 이야기를 들은 뒤, 디지털 트윈과 AI로 풀 가치가 있는 문제를 고르고 사업성을 검토합니다.</p>
+      </div>
+      <div class="card">
+        <span class="label">Design · 설계</span>
+        <h3>과제를 수행 가능한 계획으로 바꿉니다</h3>
+        <p>요구사항, 추진체계, 참여기관 역할, 기대효과를 정리해 국책과제 제안서와 서비스 화면으로 연결합니다.</p>
+      </div>
+      <div class="card">
+        <span class="label">Deliver · 완수</span>
+        <h3>실증과 성과를 숫자로 지킵니다</h3>
+        <p>일정, 인력, 품질, 예산, 원가와 수익성을 함께 관리하며 실증과 현장 적용까지 이어 갑니다.</p>
+      </div>
+    </div>
+
+    <blockquote>
+      “이 AI는 현장의 어떤 숫자를 바꾸고, 누가, 언제까지, 얼마로 해낼 수 있는가.”
+      <cite>— 모든 AX 과제를 시작할 때 제가 먼저 답하는 질문</cite>
+    </blockquote>
+
+    <ol class="flow" aria-label="과제 수행 흐름">
+      <li><span class="step">STEP 1</span><h4>현장 진단</h4><p>공정·설비·데이터 현황 파악, 과제 발굴, 사업성 판단</p></li>
+      <li><span class="step">STEP 2</span><h4>과제 설계·제안</h4><p>국책과제·RFP 분석, 데이터·시스템 구조 설계, 제안 발표</p></li>
+      <li><span class="step">STEP 3</span><h4>구축·실증</h4><p>디지털 트윈·AI 구축 관리, 현장·협력사 조율, 리스크 관리</p></li>
+      <li><span class="step">STEP 4</span><h4>성과·확산</h4><p>현장 지표 개선 확인, 원가·수익성 관리, 사업화·확산</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 02 COMPETENCY -->
+<section id="competency">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">03 / 09<small>COMPETENCY</small></p>
+      <div>
+        <h2>솔루션 기획 리더의 <em>네 가지 핵심 역량</em></h2>
+        <p class="lead">각 역량마다 실제로 해 온 일과 조직이 얻는 효과를 함께 적었습니다.</p>
+      </div>
+    </div>
+    <div class="comp">
+      <article class="card">
+        <span class="code">C-01</span>
+        <h3>솔루션 · 서비스 기획</h3>
+        <ul>
+          <li>웹·모바일·업무시스템 서비스 기획 20년</li>
+          <li>현장 방문과 실무자·관리자·임원진 인터뷰로 요구사항 도출</li>
+          <li>스마트팩토리 서비스 화면 기획 (철강 그룹사 과제)</li>
+          <li>가상환경 기반 병원운영 서비스 기획·실증</li>
+        </ul>
+        <p class="effect"><b>기대 효과</b> · 현장의 요구가 기능 정의와 화면으로 빠짐없이 이어집니다.</p>
+      </article>
+      <article class="card">
+        <span class="code">C-02</span>
+        <h3>국책 R&amp;D 제안 · 수행</h3>
+        <ul>
+          <li>철강 그룹사 스마트팩토리 국책과제 제안서·과제 서류 작성</li>
+          <li>연구책임자·PL·PM 수행, 참여기관·성과 관리</li>
+          <li>융합로봇·가상환경 실증사업 수행 관리</li>
+          <li>연구개발 사업계획서·기술 제안서 작성</li>
+        </ul>
+        <p class="effect"><b>기대 효과</b> · 과제 선정부터 실증·사업화까지 한 사람이 일관되게 책임집니다.</p>
+      </article>
+      <article class="card">
+        <span class="code">C-03</span>
+        <h3>프로젝트 총괄 PM</h3>
+        <ul>
+          <li>대규모 IT/SI·디지털 전환 프로젝트 수행 총괄</li>
+          <li>일정, 인력, 품질, 예산 관리</li>
+          <li>발주처, 협력사, 참여기관 사이의 이해관계 조율</li>
+          <li>현장 직원 대상 설명으로 새 도구 도입 설득</li>
+          <li>다수 프로젝트 동시 수행, 이슈·리스크 관리</li>
+        </ul>
+        <p class="effect"><b>기대 효과</b> · 여러 조직이 얽힌 과제도 납기와 품질이 유지됩니다.</p>
+      </article>
+      <article class="card">
+        <span class="code">C-04</span>
+        <h3>제안 · 사업개발 · AI 실무 활용</h3>
+        <ul>
+          <li>공공·기업 대상 제안 전략과 RFP 분석</li>
+          <li>기술·서비스 기반 제안서 작성, 제안 발표와 수주 지원</li>
+          <li>생성형 AI로 리서치·문서·프로토타입 작업 가속</li>
+          <li>AI 도구로 직접 구현해 기획안을 빠르게 검증</li>
+        </ul>
+        <p class="effect"><b>기대 효과</b> · 제안 단계에서 약속한 효과를 실제 수행 계획과 맞춰 둡니다.</p>
+      </article>
+    </div>
+    <div class="method">
+      <div class="method-head"><span class="label">Methodology</span><h3>보유 방법론</h3></div>
+      <div class="method-grid">
+        <article class="m-card">
+          <span class="k">PROFIT MANAGEMENT</span>
+          <div class="big">20%<small>프로젝트 수익</small></div>
+          <h4>프로젝트 수익 20% 달성 관리 방법론</h4>
+          <ul>
+            <li>수주 단계부터 원가와 목표 수익을 함께 설정</li>
+            <li>수행 중 투입 인력·예산을 수익 기준으로 점검</li>
+            <li>프로젝트별 수익성을 경영진에 정기 보고</li>
+          </ul>
+        </article>
+        <article class="m-card dark">
+          <span class="k">SCHEDULE &amp; RISK</span>
+          <div class="big">On-time<small>일정 준수</small></div>
+          <h4>프로젝트 일정 및 리스크 관리 방법론</h4>
+          <ul>
+            <li>세부 수행계획과 마일스톤 단위 일정 관리</li>
+            <li>이슈·리스크를 조기에 식별하고 대응 계획 수립</li>
+            <li>다수 프로젝트 동시 수행 시 통합 일정 조율</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 EVIDENCE -->
+<section id="evidence">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">04 / 09<small>EVIDENCE</small></p>
+      <div>
+        <h2>숫자로 보는 <em>경력 근거</em></h2>
+        <p class="lead">실무 기획자에서 본부장까지 단계를 밟으며 쌓은 경력이, 새로운 분야의 과제도 끝까지 책임지는 힘입니다.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">20<small>년</small> 8<small>개월</small></div><p>IT/SI·디지털 서비스 분야 총 경력 (2006.04 ~ 현재)</p></div>
+      <div class="stat"><div class="num">3<small>건</small></div><p>국책 R&amp;D 리더 역할 · 연구책임자, PL, PM</p></div>
+      <div class="stat"><div class="num">13<small>년+</small></div><p>팀장 이상 리더 역할 (2013 ~ 현재)</p></div>
+      <div class="stat"><div class="num">28<small>건</small></div><p>공공·금융·모바일 분야 주요 IT/SI 프로젝트</p></div>
+    </div>
+    <div class="roles">
+      <div class="card"><span class="label">R&amp;D Lead</span><p><b>연구책임자 · PL · PM</b><br>국책 R&amp;D 과제 수행 총괄</p></div>
+      <div class="card"><span class="label">Division Head</span><p><b>본부장</b> · 프레임아웃<br>Digital Innovation Group, PM·PO</p></div>
+      <div class="card"><span class="label">Team Lead</span><p><b>기획팀장</b> · 인포인, 익스풀<br>기획조직 운영, 유관부서 협업 조율</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 R&D -->
+<section id="rnd">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">05 / 09<small>NATIONAL R&amp;D</small></p>
+      <div>
+        <h2>현장 실증형 국책 R&amp;D에서 맡은 <em>세 가지 역할</em></h2>
+        <p class="lead">로봇, 가상환경, 지역혁신 과제를 PM, 연구책임자, PL로 이끌었습니다. 기술을 실제 현장에 넣고 검증하는 실증 과제를 주관기업과 참여기업 양쪽 입장에서 경험했습니다. 이 경험을 제조 분야 국책과제 제안으로 이어 가고 있습니다.</p>
+      </div>
+    </div>
+    <div class="rnd">
+      <article class="card">
+        <span class="role-badge">PM</span>
+        <p class="meta">주관기업 · 융합로봇 실증</p>
+        <h3>대규모 융합로봇 실증 국책사업</h3>
+        <ul>
+          <li>대규모 실증사업 프로젝트 관리</li>
+          <li>사업 추진계획 및 수행 관리</li>
+          <li>사업 일정과 참여기관 업무 조율</li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="role-badge">연구책임자</span>
+        <p class="meta">참여기업 · 가상환경(디지털 트윈) 실증</p>
+        <h3>삼성병원 가상환경 기반 병원운영 기술개발 및 실증사업</h3>
+        <ul>
+          <li>연구개발 추진 방향과 수행계획 관리</li>
+          <li>연구개발 일정 및 사업 진행 관리</li>
+          <li>기술개발부터 현장 실증까지 연구 책임</li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="role-badge">PL</span>
+        <p class="meta">참여기업 · 지역혁신</p>
+        <h3>세종시 지역혁신클러스터 육성 R&amp;D 사업</h3>
+        <ul>
+          <li>지역혁신클러스터 육성 R&amp;D 과제 수행</li>
+          <li>과제 및 세부 업무 추진 관리</li>
+          <li>연구개발 진행·사업 수행 관리</li>
+        </ul>
+      </article>
+    </div>
+    <div class="rnd-extra">
+      <p class="label" style="padding-top:8px">그 밖의 국책·공공사업</p>
+      <ul>
+        <li>철강 그룹사 스마트팩토리 국책과제 제안 참여 (현장 조사·인터뷰, 제안서·과제 서류)</li>
+        <li>연구개발 사업계획서 작성</li>
+        <li>기술 제안서 작성</li>
+        <li>서비스·시스템 구축 전략 수립</li>
+        <li>국책과제 수행 및 사업관리</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">06 / 09<small>PROJECTS</small></p>
+      <div>
+        <h2>AX의 바탕이 된 IT/SI 프로젝트 <em>28건</em></h2>
+        <p class="lead">공공기관, 대학, 금융사, 대기업, 통신사의 업무시스템·모바일·웹 구축을 맡았습니다. 시스템 연동과 데이터 구조, 사용자가 실제로 쓰는 화면을 만든 경험이 솔루션 기획의 기반입니다. 분야별로 걸러 볼 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="filters" role="group" aria-label="분야 선택" id="filters"></div>
+    <div class="proj-table" id="projTable">
+      <div class="proj-row head"><span>NO.</span><span>프로젝트</span><span class="h-cat">분야</span><span>역할</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CAREER -->
+<section id="career">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">07 / 09<small>CAREER</small></p>
+      <div>
+        <h2>경력 <em>간트 차트</em> 2006–2026</h2>
+        <p class="lead">마케팅·콘텐츠 기획으로 시작해 서비스기획, PM, 경영 임원, 본부장을 거쳐 제조 분야 기획으로 넓혀 온 흐름입니다. 다이아몬드는 역할이 바뀐 전환점입니다.</p>
+      </div>
+    </div>
+
+    <div class="gantt-scroll" tabindex="0" aria-label="연도별 경력 차트">
+      <div class="gantt" id="gantt"></div>
+    </div>
+    <div class="g-legend">
+      <span><i style="background:var(--accent)"></i>실무·PM</span>
+      <span><i style="background:var(--ink)"></i>팀장 이상 리더</span>
+      <span><i class="d"></i>역할 전환점</span>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- 07 TOOLS -->
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">08 / 09<small>TOOLS &amp; AI</small></p>
+      <div>
+        <h2>AX를 기획하려면 <em>AI를 직접</em> 써 봐야 합니다</h2>
+        <p class="lead">관리만 하는 PM이 아니라, 결과물이 어떻게 만들어지는지 손으로 아는 PM입니다. AI가 무엇을 잘하고 어디서 틀리는지 직접 써 보며 알기 때문에, 제조 현장에 AI를 붙일 자리를 현실적으로 판단합니다.</p>
+      </div>
+    </div>
+    <div class="tools-grid">
+      <div class="card">
+        <span class="label">Build Range</span>
+        <div class="chain" aria-label="직접 수행 범위">
+          <span>기획</span><i>→</i><span>디자인</span><i>→</i><span>퍼블리싱</span><i>→</i><span>개발</span><i>→</i><span class="ai">AI로 검증·가속</span>
+        </div>
+        <p>웹사이트 제작에서 디자인, 퍼블리싱, 개발까지 전 과정을 직접 해 본 경험이 있습니다. 최근에는 생성형 AI와 AI 기반 개발 도구로 웹사이트와 소프트웨어 개발의 속도를 높이고, 기획부터 결과물 검증까지 혼자 다룰 수 있는 범위를 넓히고 있습니다.</p>
+      </div>
+      <div class="card">
+        <span class="label">AI Toolset</span>
+        <div class="toolset ai-tools">
+          <div>Claude<small>기획·문서 작성</small></div>
+          <div>Claude Code<small>개발·구현</small></div>
+          <div>Gemini<small>리서치·분석</small></div>
+          <div>ChatGPT<small>아이디어·초안 작성</small></div>
+        </div>
+        <p style="margin-top:16px">기획 문서 작성부터 리서치, 실제 웹사이트 개발과 결과물 검증까지 AI 도구를 실무에 직접 쓰고 있습니다. 이 감각으로 제조 현장의 문서·보고·데이터 분석 업무 가운데 생성형 AI가 효과를 낼 지점을 찾습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CREDENTIALS -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">09 / 09<small>CREDENTIALS</small></p>
+      <div><h2>학력 및 자격</h2></div>
+    </div>
+    <div class="creds">
+      <div class="card">
+        <span class="label">Education</span>
+        <h3>숭실대학교 전산원 멀티미디어</h3>
+        <p>1998.02 – 2004.01 · 졸업</p>
+        <div class="sub"><h3>서울로봇고등학교</h3><p>1998 · 졸업</p></div>
+      </div>
+      <div class="card">
+        <span class="label">Certificate</span>
+        <h3>워드프로세서 1급</h3>
+        <p>2001.11 · 대한상공회의소</p>
+      </div>
+      <div class="card">
+        <span class="label">Domain</span>
+        <h3>공공·교육 / 금융 / 통신·모바일 / 로봇·의료(실증) / 제조(철강·과제 제안)</h3>
+        <p>발주처·산업 유형별 수행 경험</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="sec-no" style="margin-bottom:16px;color:#5BC0E8">NEXT PROJECT</p>
+      <h2>다음 <em>솔루션</em>의<br>기획부터 출시까지 함께 맡겠습니다</h2>
+      <p class="lead">솔루션 기획, 제조 AX·스마트팩토리 사업기획, 국책 R&amp;D PM 포지션에 대한 연락을 기다립니다.</p>
+      <a class="mail" href="mailto:beronim@naver.com">beronim@naver.com</a>
+      <button class="copy-btn" id="copyBtn" type="button">주소 복사</button>
+    </div>
+    <dl class="cond">
+      <div><dt>희망 직무</dt><dd>솔루션·서비스 기획 리더, 제조 AX 사업기획·PM, 국책 R&amp;D 사업관리</dd></div>
+      <div><dt>산업</dt><dd>제조 AI·AX, 디지털 트윈, 스마트팩토리, IT/SI</dd></div>
+      <div><dt>고용 형태</dt><dd>정규직 · 프리랜서 · 헤드헌팅</dd></div>
+      <div><dt>근무지</dt><dd>서울 전 지역</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 배현종</span><span>Solution Planning · Manufacturing AX · National R&amp;D · PM</span></div></footer>
+
+<script>
+(function(){
+  // mobile menu
+  var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+
+  // projects
+  var P=[
+    ['공공·교육','지방자치인재개발원 웹사이트 재구축',''],
+    ['공공·교육','동국대학교 핵심역량 경력개발시스템 구축',''],
+    ['공공·교육','국민대학교 핵심역량 경력개발시스템 구축',''],
+    ['공공·교육','성북구청 웹사이트 리뉴얼','PM'],
+    ['공공·교육','백범김구기념관 웹사이트 리뉴얼','PM'],
+    ['공공·교육','국제교류재단 웹사이트 리뉴얼','PM'],
+    ['공공·교육','EBS E-learning 시스템 구축','기획·PL'],
+    ['금융·기업','신한은행 기업뱅킹 UI/UX 개편','기획 PL'],
+    ['금융·기업','농협 사회공헌 관리시스템 재구축','기획 PL'],
+    ['금융·기업','한화자산운용 웹사이트 구축','PM'],
+    ['금융·기업','신한카드 본 사이트 재구축','PA'],
+    ['금융·기업','한화투자증권 자산관리 시스템 구축','기획 PM'],
+    ['금융·기업','종근당 Mobile Office 영업관리 시스템','기획'],
+    ['금융·기업','삼성전자 프린팅 사업부 VOC Portal 구축','PM'],
+    ['모바일·플랫폼','LGU+ PayNow 애플리케이션 구축','기획 PM'],
+    ['모바일·플랫폼','LGU+ Smart X-Pay 온라인 결제 시스템','기획'],
+    ['모바일·플랫폼','T-Note 애플리케이션','기획 PM'],
+    ['모바일·플랫폼','씨티카드 모바일 앱','기획'],
+    ['모바일·플랫폼','Samsung Launcher','PM'],
+    ['모바일·플랫폼','Kia Launcher','기획'],
+    ['모바일·플랫폼','SKT TBC 종교포털 커뮤니티 구축',''],
+    ['모바일·플랫폼','HP N-API 연동 시스템','기획 PM'],
+    ['기타','SkyTV 웹사이트 리뉴얼',''],
+    ['기타','LG MMA Global Web/Mobile 구축',''],
+    ['기타','삼성전자 키오스크 시스템 구축',''],
+    ['기타','아모레퍼시픽 사이트 운영','운영'],
+    ['기타','2010 FIFA World Cup 현대자동차 마이크로사이트','기획'],
+    ['기타','희림건축 국·영문 사이트 구축','PM']
+  ];
+  var table=document.getElementById('projTable'),rows=[];
+  P.forEach(function(p,i){
+    var r=document.createElement('div');r.className='proj-row';r.dataset.cat=p[0];
+    var role=p[2]||'기획';
+    r.innerHTML='<span class="idx">'+String(i+1).padStart(2,'0')+'</span><span class="name"></span><span class="cat"></span><span class="role-chip'+(/PM|PL/.test(role)?' pm':'')+'"></span>';
+    r.querySelector('.name').textContent=p[1];r.querySelector('.cat').textContent=p[0];r.querySelector('.role-chip').textContent=role;
+    table.appendChild(r);rows.push(r);
+  });
+  var cats=['전체','공공·교육','금융·기업','모바일·플랫폼','기타'],fbox=document.getElementById('filters');
+  cats.forEach(function(c,ci){
+    var n=c==='전체'?P.length:P.filter(function(p){return p[0]===c}).length;
+    var b=document.createElement('button');b.type='button';b.id='f-'+ci;b.setAttribute('aria-pressed',c==='전체');
+    b.innerHTML=c+'<span class="cnt">'+n+'</span>';
+    b.addEventListener('click',function(){
+      fbox.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      rows.forEach(function(r){r.hidden=!(c==='전체'||r.dataset.cat===c)});
+    });
+    fbox.appendChild(b);
+  });
+
+  // career
+  var C=[
+    {co:'좋은교육',dept:'마케팅',title:'사원(연구원)',s:[2006,4],e:[2007,10],d:'1년 7개월',duty:['홍보','마케팅기획','시장분석'],desc:'교육 서비스 홍보와 마케팅 기획, 시장 분석을 맡으며 고객과 시장을 보는 눈을 길렀습니다.'},
+    {co:'시드포스트크리에이티브',dept:'전략기획팀',title:'대리(주임연구원)',s:[2007,11],e:[2011,8],d:'3년 10개월',duty:['서비스기획','콘텐츠기획','PM'],desc:'에이전시에서 대기업 웹사이트와 마이크로사이트를 기획하며 PM 업무를 시작했습니다.'},
+    {co:'트루모바일',dept:'기획팀',title:'과장(선임연구원)',s:[2011,9],e:[2013,5],d:'1년 9개월',duty:['앱기획','PM'],desc:'스마트폰 확산기에 금융·통신사 모바일 앱 기획과 PM을 맡았습니다.'},
+    {co:'익스풀',dept:'기획팀',title:'차장(수석연구원) · 팀장',s:[2013,6],e:[2015,11],d:'2년 6개월',duty:['서비스기획','앱기획','PM'],desc:'처음으로 기획팀을 이끌며 서비스·앱 기획과 프로젝트 관리를 총괄했습니다.',lead:1,ms:'팀장'},
+    {co:'인사이드',dept:'경영',title:'대표이사',s:[2015,12],e:[2019,10],d:'3년 11개월',duty:['경영','서비스기획','스토리보드','앱기획','PM'],desc:'회사를 직접 경영하며 수주, 수행, 인력, 손익까지 사업 전체를 책임졌습니다.',lead:1,ms:'대표이사'},
+    {co:'프레임아웃',dept:'Digital Innovation Group',title:'부장 · 본부장',s:[2019,11],e:[2023,8],d:'3년 10개월',duty:['PM','PO','프로젝트 관리'],desc:'디지털 혁신 본부를 맡아 다수 프로젝트를 동시에 운영하고 PO 역할까지 수행했습니다.',lead:1,ms:'본부장'},
+    {co:'인포인',dept:'기획팀',title:'부장 · 팀장',s:[2023,9],e:null,d:'재직 중',duty:['기획팀장','스마트팩토리 국책과제 제안','현장 조사·인터뷰','과제 서류 작성','화면 기획','현장 도입 설명'],desc:'철강 제조 그룹(화인베스틸·동일스틸럭스) 계열사에서 기획팀을 이끌고 있습니다. 그룹사 스마트팩토리 국책과제의 제안서와 과제 서류 작성, 화면 기획을 맡았고, 제안을 위해 계열사 현장을 방문해 공정 상황을 확인하고 생산·품질 담당자, 안전관리팀장, 임원진을 인터뷰했습니다.',lead:1,ms:'제조 분야 확장',now:1}
+  ];
+  var START=2006,END=2027,SPAN=END-START;
+  function pos(y,m){return ((y-START)+(m-1)/12)/SPAN*100}
+  var g=document.getElementById('gantt'),now=new Date();
+  var axis='<div class="g-axis"><span></span><div class="ticks">';
+  for(var y=START;y<=END;y+=3){axis+='<span style="left:'+((y-START)/SPAN*100)+'%">'+y+'</span>';}
+  axis+='</div></div>';
+  var html=axis;
+  C.forEach(function(c,i){
+    var l=pos(c.s[0],c.s[1]),r=c.e?pos(c.e[0],c.e[1]+1):pos(now.getFullYear(),now.getMonth()+2);
+    html+='<div class="g-row"><div class="g-name">'+c.co+'<small>'+c.title+'</small></div><div class="g-track" style="--yr:'+(100/SPAN)+'%">'+
+      '<div class="g-bar'+(c.lead?' lead':'')+(c.now?' now':'')+'" style="left:'+l+'%;width:'+(r-l)+'%;animation-delay:'+(i*0.1)+'s"><span>'+c.d+'</span></div>'+
+      (c.ms?'<span class="g-ms" style="left:'+l+'%" title="'+c.ms+'"></span>':'')+
+    '</div></div>';
+  });
+  g.innerHTML=html;
+
+  var tl=document.getElementById('timeline'),out='';
+  C.slice().reverse().forEach(function(c){
+    var f=function(a){return a[0]+'.'+String(a[1]).padStart(2,'0')};
+    out+='<article class="t-item"><div class="t-when">'+f(c.s)+' – '+(c.e?f(c.e):'현재')+'<b>'+c.d+'</b></div><div><h3>'+c.co+'<span>'+c.dept+' · '+c.title+'</span></h3><p>'+c.desc+'</p><div class="duty">'+c.duty.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div></div></article>';
+  });
+  tl.innerHTML=out;
+
+  // copy email
+  var cb=document.getElementById('copyBtn');
+  cb.addEventListener('click',function(){
+    var done=function(t){cb.textContent=t;setTimeout(function(){cb.textContent='주소 복사'},1800)};
+    try{navigator.clipboard.writeText('beronim@naver.com').then(function(){done('복사됨')},function(){done('직접 선택해 복사해 주세요')});}catch(e){done('직접 선택해 복사해 주세요')}
+  });
+})();
+</script>
+</body>
+</html>
