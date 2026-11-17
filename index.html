@@ -5,8 +5,8 @@
     <link rel="shortcut icon" href="favicon.ico">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>배현종 포트폴리오 · 솔루션 기획 · 제조 AX · PM</title>
-<meta name="description" content="20년 8개월 IT/SI 서비스 기획, 팀장 이상 리더 13년, 국책 R&D 리더 3건. 철강 그룹 계열사에서 스마트팩토리 국책과제 제안에 참여한 솔루션 기획 리더 배현종의 포트폴리오.">
+<title>배현종 포트폴리오 · 전략·사업기획 · 프로젝트 총괄 · 조직 리더십</title>
+<meta name="description" content="배현종 포트폴리오. 20년 8개월 IT/SI 경력, 13년 이상 조직 리더 경험, 전략·사업기획, 프로젝트 총괄, 국책 R&D PM 및 제조 디지털전환 사업 경험.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -238,6 +238,46 @@ blockquote cite{display:block;font-family:var(--font-mono);font-style:normal;fon
 .dt-list li span{font-family:var(--font-mono);font-size:12px;color:var(--accent);padding-top:3px}
 @media (max-width:820px){.dt-box{grid-template-columns:1fr}.dt-list{grid-template-columns:1fr}}
 
+
+/* ---------- featured project showcase ---------- */
+.showcase-intro{max-width:760px;color:var(--muted);margin-top:12px}
+.showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.showcase-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(14,30,51,.055)}
+.showcase-copy{padding:24px 26px 18px}
+.showcase-kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+.showcase-copy h3{font-size:21px;margin:7px 0 10px}
+.showcase-copy p{font-size:14px;color:var(--muted);line-height:1.7}
+.showcase-points{margin:14px 0 0;padding-left:19px;color:var(--muted);font-size:14px;display:grid;gap:5px}
+.showcase-gallery{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 12px 12px}
+.showcase-gallery a{display:block;overflow:hidden;border-radius:9px;background:var(--paper-2);aspect-ratio:16/10}
+.showcase-gallery a.portrait{aspect-ratio:3/4}
+.showcase-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.showcase-gallery a:hover img{transform:scale(1.035)}
+.showcase-gallery a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:760px){.showcase-grid{grid-template-columns:1fr}.showcase-copy{padding:21px 20px 15px}}
+
+
+/* ---------- case study evidence ---------- */
+.case-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.case-card{border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
+.case-top{padding:26px 28px 18px;display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.case-top h3{font-size:22px;margin:6px 0 8px}
+.case-top p{color:var(--muted);font-size:14px;max-width:760px}
+.case-role{white-space:nowrap;border:1px solid var(--accent);color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700}
+.case-body{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;padding:0 28px 26px}
+.case-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.case-fact{background:var(--paper-2);border-radius:10px;padding:14px}
+.case-fact b{display:block;font-size:12px;color:var(--accent);margin-bottom:4px}
+.case-fact span{font-size:13px;color:var(--muted);line-height:1.6}
+.case-evidence{border-left:2px solid var(--accent);padding:4px 0 4px 18px}
+.case-evidence h4{font-size:14px;margin-bottom:8px}
+.case-evidence ul{padding-left:18px;color:var(--muted);font-size:13px;display:grid;gap:5px}
+.case-limit{font-size:12px;color:var(--dim);margin-top:12px}
+.leadership-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.leadership-grid .card{padding:20px}
+.leadership-grid p{font-size:13px;color:var(--muted);margin-top:8px}
+@media(max-width:760px){.case-top{display:block}.case-role{display:inline-block;margin-top:10px}.case-body{grid-template-columns:1fr;padding:0 20px 22px}.case-top{padding:22px 20px 16px}.leadership-grid{grid-template-columns:1fr}}
+
 /* ---------- projects ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
 .filters button{font:inherit;font-size:14px;background:var(--surface);color:var(--muted);border:1px solid var(--line);padding:8px 16px;border-radius:999px;cursor:pointer}
@@ -346,6 +386,8 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
         <li><a href="#competency">핵심 역량</a></li>
         <li><a href="#evidence">경력 근거</a></li>
         <li><a href="#rnd">국책 R&amp;D</a></li>
+        <li><a href="#case-studies">대표 사례</a></li>
+        <li><a href="#showcase">대표 실적</a></li>
         <li><a href="#projects">프로젝트</a></li>
         <li><a href="#career">경력</a></li>
         <li><a href="#tools">도구·AI</a></li>
@@ -360,15 +402,15 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="eyebrow">솔루션 기획 · 국책 R&amp;D · 제조 AX · 기획 리더</p>
-      <h1>현장의 말을<br><em>솔루션</em>으로 옮기는 <span style="white-space:nowrap">기획 리더</span></h1>
+      <p class="eyebrow">전략·사업기획 · 프로젝트 총괄 · 조직 리더십</p>
+      <h1>사업의 방향을 정하고<br><em>실행과 성과</em>를 이끄는 리더</h1>
       <ul class="hero-points">
-        <li>20년 8개월 동안 IT/SI 서비스를 기획했고, 그 가운데 13년은 팀장·대표이사·본부장으로 기획 조직과 사업을 이끌었습니다.</li>
+        <li>20년 8개월의 IT/SI 서비스 기획 경험을 바탕으로, 13년 이상 팀장·대표이사·본부장 역할을 맡아 조직과 프로젝트를 이끌었습니다.</li>
         <li>철강 제조 그룹(화인베스틸·동일스틸럭스) 계열사 인포인에서 그룹사 스마트팩토리 국책과제의 제안서, 과제 서류, 화면 기획을 맡았고, 제안을 위해 계열사 현장을 직접 확인하고 생산·품질 담당자, 안전관리팀장, 임원진을 인터뷰했습니다.</li>
-        <li>가상환경(디지털 트윈) 실증 연구책임자를 포함한 국책 R&amp;D 리더 3건을 맡아, 과제를 제안부터 실증까지 이끌었습니다.</li>
+        <li>융합로봇·가상환경·지역혁신 분야 국책 R&amp;D에서 PM·연구책임자·PL 역할을 수행했습니다. 과제별 담당 범위와 수행 단계에 맞춰 사업관리와 실증 업무를 맡았습니다.</li>
       </ul>
       <div class="tags">
-        <span class="tag">솔루션·서비스 기획</span>
+        <span class="tag">전략·사업기획</span>
         <span class="tag">스마트팩토리 국책과제 제안</span>
         <span class="tag">현장 인터뷰·요구사항 도출</span>
         <span class="tag">디지털 트윈 실증</span>
@@ -377,7 +419,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
         <span class="tag">생성형 AI 실무 활용</span>
       </div>
       <div class="btns">
-        <a class="btn primary" href="#focus">제조 분야 경험 보기 ↓</a>
+        <a class="btn primary" href="#case-studies">대표 수행 사례 보기 ↓</a>
         <a class="btn ghost" href="#contact">연락하기</a>
       </div>
     </div>
@@ -399,7 +441,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="focus">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">01 / 09<small>MANUFACTURING</small></p>
+      <p class="sec-no">01 / 11<small>MANUFACTURING</small></p>
       <div>
         <h2>철강 현장에서 듣고, <em>제안서</em>로 옮겼습니다</h2>
         <p class="lead">제가 일하는 인포인은 철강 제조 그룹의 계열사입니다. 그룹사 스마트팩토리 사업에서 저는 국책과제 제안서와 과제 서류 작성, 서비스 화면 기획을 맡았습니다. 제안을 준비하며 계열사 생산 현장을 직접 찾아 공정 상황을 확인하고 생산·품질 담당자, 안전관리팀장, 임원진을 인터뷰했고, 들은 내용을 과제 목표와 화면으로 옮겼습니다. 공정 지식은 지금도 배우는 중이지만, 현장의 말을 기획 문서로 바꾸는 일은 20년 동안 해 온 일입니다.</p>
@@ -475,7 +517,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 
     <div class="sub-head">
       <span class="label">Manufacturing AX</span><h3>더 깊이 다루고 싶은 제조 AX 과제 영역</h3>
-      <p>현장 인터뷰와 제안 준비 과정에서 접한 과제들입니다. 솔루션 기획으로 깊게 다루고 싶어 공부하고 있는 영역입니다.</p>
+      <p>현장 인터뷰와 제안 준비 과정에서 접한 과제들입니다. 향후 사업기획과 디지털 전환 관점에서 더 깊이 확장하고 싶은 영역입니다.</p>
     </div>
     <div class="ax-grid">
       <article class="ax"><span class="no">AX-01</span><h4>설비 예지보전</h4><p>설비 가동 데이터로 고장 징후를 미리 잡아 비계획 정지를 줄입니다.</p><span class="kpi">설비 가동률</span></article>
@@ -492,10 +534,10 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="about">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">02 / 09<small>ABOUT</small></p>
+      <p class="sec-no">02 / 11<small>ABOUT</small></p>
       <div>
         <h2>AX는 기술 도입이 아니라 <em>현장 성과</em>로 끝나야 합니다</h2>
-        <p class="lead">서비스기획자로 시작해 PM, 기획팀장, 대표이사, 본부장을 거쳐 지금은 철강 그룹 계열사에서 스마트팩토리 국책과제 제안과 서비스 기획에 참여하고 있습니다. 제조 AI 과제가 PoC에서 멈추는 이유는 대개 기술보다 '무엇을, 누가, 어떤 지표로' 해낼지가 정해지지 않았기 때문입니다. 저는 그 부분을 끝까지 책임지는 사람입니다.</p>
+        <p class="lead">서비스기획자로 시작해 PM, 기획팀장, 대표이사, 본부장을 거쳐 지금은 철강 그룹 계열사에서 스마트팩토리 국책과제 제안과 서비스 기획에 참여하고 있습니다. 제조 AI·AX 과제에서는 기술 검토와 함께 현장 문제, 담당 주체, 데이터 조건, 검증 지표를 먼저 정리해야 한다고 생각합니다. 저는 현장 인터뷰와 요구사항 정리, 제안서·과제 서류, 서비스 화면 기획을 연결해 온 기획 리더입니다.</p>
       </div>
     </div>
 
@@ -512,8 +554,8 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
       </div>
       <div class="card">
         <span class="label">Deliver · 완수</span>
-        <h3>실증과 성과를 숫자로 지킵니다</h3>
-        <p>일정, 인력, 품질, 예산, 원가와 수익성을 함께 관리하며 실증과 현장 적용까지 이어 갑니다.</p>
+        <h3>수행 조건과 검수 기준을 관리합니다</h3>
+        <p>일정, 인력, 품질, 예산과 산출물 기준을 정리하고, 참여기관·개발조직·고객 사이의 이슈와 리스크를 조율합니다. 정량 성과는 확인 가능한 실적이 있을 때 별도로 제시합니다.</p>
       </div>
     </div>
 
@@ -535,23 +577,23 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="competency">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">03 / 09<small>COMPETENCY</small></p>
+      <p class="sec-no">03 / 11<small>COMPETENCY</small></p>
       <div>
-        <h2>솔루션 기획 리더의 <em>네 가지 핵심 역량</em></h2>
+        <h2>사업과 조직을 이끄는 <em>네 가지 핵심 역량</em></h2>
         <p class="lead">각 역량마다 실제로 해 온 일과 조직이 얻는 효과를 함께 적었습니다.</p>
       </div>
     </div>
     <div class="comp">
       <article class="card">
         <span class="code">C-01</span>
-        <h3>솔루션 · 서비스 기획</h3>
+        <h3>사업·서비스 기획</h3>
         <ul>
           <li>웹·모바일·업무시스템 서비스 기획 20년</li>
           <li>현장 방문과 실무자·관리자·임원진 인터뷰로 요구사항 도출</li>
           <li>스마트팩토리 서비스 화면 기획 (철강 그룹사 과제)</li>
           <li>가상환경 기반 병원운영 서비스 기획·실증</li>
         </ul>
-        <p class="effect"><b>기대 효과</b> · 현장의 요구가 기능 정의와 화면으로 빠짐없이 이어집니다.</p>
+        <p class="effect"><b>핵심 역량</b> · 고객과 현장의 요구를 사업 방향과 실행 과제로 구체화합니다.</p>
       </article>
       <article class="card">
         <span class="code">C-02</span>
@@ -593,12 +635,12 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
       <div class="method-grid">
         <article class="m-card">
           <span class="k">PROFIT MANAGEMENT</span>
-          <div class="big">20%<small>프로젝트 수익</small></div>
-          <h4>프로젝트 수익 20% 달성 관리 방법론</h4>
+          <div class="big">수익성<small>관리 체계</small></div>
+          <h4>프로젝트 원가·수익성 관리 방법론</h4>
           <ul>
-            <li>수주 단계부터 원가와 목표 수익을 함께 설정</li>
-            <li>수행 중 투입 인력·예산을 수익 기준으로 점검</li>
-            <li>프로젝트별 수익성을 경영진에 정기 보고</li>
+            <li>수주 검토 단계에서 투입 범위와 원가 요소를 확인</li>
+            <li>수행 중 인력 투입·외주·일정 변경에 따른 비용 영향을 점검</li>
+            <li>계획 대비 실적을 확인해 수익성 리스크를 조기에 공유</li>
           </ul>
         </article>
         <article class="m-card dark">
@@ -620,7 +662,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="evidence">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">04 / 09<small>EVIDENCE</small></p>
+      <p class="sec-no">04 / 11<small>EVIDENCE</small></p>
       <div>
         <h2>숫자로 보는 <em>경력 근거</em></h2>
         <p class="lead">실무 기획자에서 본부장까지 단계를 밟으며 쌓은 경력이, 새로운 분야의 과제도 끝까지 책임지는 힘입니다.</p>
@@ -644,10 +686,10 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="rnd">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">05 / 09<small>NATIONAL R&amp;D</small></p>
+      <p class="sec-no">05 / 11<small>NATIONAL R&amp;D</small></p>
       <div>
         <h2>현장 실증형 국책 R&amp;D에서 맡은 <em>세 가지 역할</em></h2>
-        <p class="lead">로봇, 가상환경, 지역혁신 과제를 PM, 연구책임자, PL로 이끌었습니다. 기술을 실제 현장에 넣고 검증하는 실증 과제를 주관기업과 참여기업 양쪽 입장에서 경험했습니다. 이 경험을 제조 분야 국책과제 제안으로 이어 가고 있습니다.</p>
+        <p class="lead">로봇·가상환경·지역혁신 분야 국책 R&amp;D에서 PM, 연구책임자, PL 역할을 수행했습니다. 아래에는 과제별로 확인 가능한 본인 역할을 구분해 기재했으며, 컨소시엄 전체 성과를 개인 실적으로 혼용하지 않았습니다.</p>
       </div>
     </div>
     <div class="rnd">
@@ -682,6 +724,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
         </ul>
       </article>
     </div>
+    <p class="case-limit" style="margin-top:18px">※ 과제별 사업연도·수행기간·총사업비·정량목표 대비 실적·최종평가 결과는 현재 공개 자료에 포함되어 있지 않아 임의로 기재하지 않았습니다.</p>
     <div class="rnd-extra">
       <p class="label" style="padding-top:8px">그 밖의 국책·공공사업</p>
       <ul>
@@ -695,14 +738,221 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
   </div>
 </section>
 
+
+
+<!-- CASE STUDIES: ROLE / DECISIONS / EVIDENCE -->
+<section id="case-studies">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">06 / 11<small>CASE STUDIES</small></p>
+      <div>
+        <h2>경력의 나열보다 <em>맡은 역할과 판단</em>을 보여드립니다</h2>
+        <p class="lead">현재 공개 가능한 이력과 프로젝트 자료를 기준으로 대표 사례 3건을 정리했습니다. 전체 사업 성과와 개인 기여를 구분하고, 확인되지 않은 예산·기간·정량 성과는 임의로 기재하지 않았습니다.</p>
+      </div>
+    </div>
+
+    <div class="case-grid">
+      <article class="case-card">
+        <div class="case-top">
+          <div>
+            <span class="label">01 · MANUFACTURING / SMART FACTORY PROPOSAL</span>
+            <h3>철강 그룹사 스마트팩토리 국책과제 제안</h3>
+            <p>생산 현장의 요구를 조사해 과제 목표·추진 내용·서비스 화면으로 구체화한 제조 분야 기획 사례</p>
+          </div>
+          <span class="case-role">기획팀장 · 제안·화면기획</span>
+        </div>
+        <div class="case-body">
+          <div class="case-facts">
+            <div class="case-fact"><b>문제 파악</b><span>생산·품질 담당자, 안전관리팀장, 임원진의 서로 다른 요구와 현장 운영 이슈 확인</span></div>
+            <div class="case-fact"><b>본인 담당</b><span>현장 방문·인터뷰, 요구사항 정리, 국책과제 제안서·과제 서류 작성, 서비스 화면 기획</span></div>
+            <div class="case-fact"><b>핵심 판단</b><span>현장 사용자의 업무 부담과 도입 수용성을 고려해 기능·화면 요구를 정리</span></div>
+            <div class="case-fact"><b>수행 단계</b><span>현재 공개 자료 기준: 제안 준비 및 기획 참여</span></div>
+          </div>
+          <div class="case-evidence">
+            <h4>확인 가능한 작업 범위</h4>
+            <ul>
+              <li>철강 계열사 생산 현장 방문 및 공정·설비 운영 상황 확인</li>
+              <li>생산·품질·안전·경영 관점의 요구사항을 과제 목표와 추진 내용으로 정리</li>
+              <li>스마트팩토리 서비스 화면 기획 및 현장 도입 필요성 설명</li>
+            </ul>
+            <p class="case-limit">※ 제안 참여 사례입니다. 선정 여부, 구축 완료, 생산성 개선 수치 등은 현재 공개 자료에 기재하지 않았습니다.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <div>
+            <span class="label">02 · NATIONAL R&amp;D / ROBOTICS</span>
+            <h3>대규모 융합로봇 실증 국책사업</h3>
+            <p>다종 로봇과 건물 내 시설 연계를 포함한 실증사업에서 프로젝트 관리 역할을 수행한 사례</p>
+          </div>
+          <span class="case-role">PM · 주관기업</span>
+        </div>
+        <div class="case-body">
+          <div class="case-facts">
+            <div class="case-fact"><b>사업 성격</b><span>대규모 융합로봇 실증 국책사업</span></div>
+            <div class="case-fact"><b>본인 담당</b><span>사업 추진계획 및 수행 관리, 일정 관리, 참여기관 업무 조율</span></div>
+            <div class="case-fact"><b>관리 관점</b><span>로봇 운영·충전·배터리·통신 상태, 엘리베이터 연계, 배송·업무 현황</span></div>
+            <div class="case-fact"><b>주요 산출물</b><span>사업 추진·관리 자료와 통합 관제 플랫폼 화면</span></div>
+          </div>
+          <div class="case-evidence">
+            <h4>실증 화면에서 확인할 수 있는 기능</h4>
+            <ul>
+              <li>로봇별 운행·충전·배터리·통신 상태 통합 모니터링</li>
+              <li>엘리베이터 연계와 로봇 이동·업무 수행 현황 시각화</li>
+              <li>실시간 알림, 주문·배송 현황, 운영 통계 제공</li>
+            </ul>
+            <p class="case-limit">※ 화면은 사업 결과물의 예시이며, 전체 시스템 개발 기여와 본인 PM 역할을 구분해 기재했습니다. 과제 기간·예산·정량목표·최종평가 결과는 별도 확인 후 추가할 수 있습니다.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <div>
+            <span class="label">03 · FINANCIAL / SI SERVICE PLANNING</span>
+            <h3>신한은행 기업뱅킹 UI/UX 개편</h3>
+            <p>금융 업무 서비스의 사용자 경험과 화면 구조를 다룬 SI 프로젝트</p>
+          </div>
+          <span class="case-role">기획 PL</span>
+        </div>
+        <div class="case-body">
+          <div class="case-facts">
+            <div class="case-fact"><b>프로젝트 분야</b><span>금융·기업 업무시스템</span></div>
+            <div class="case-fact"><b>본인 역할</b><span>서비스 기획 PL</span></div>
+            <div class="case-fact"><b>경력상 의미</b><span>금융 업무 서비스의 UI/UX 기획 및 프로젝트 리딩 경험</span></div>
+            <div class="case-fact"><b>공개 자료 범위</b><span>프로젝트명과 역할 정보</span></div>
+          </div>
+          <div class="case-evidence">
+            <h4>이 사례에서 강조하는 역량</h4>
+            <ul>
+              <li>서비스 기획 관점에서 금융 업무 화면과 사용자 흐름을 다룬 경험</li>
+              <li>기획 PL 역할로 프로젝트 기획 업무를 수행한 이력</li>
+              <li>공공·금융·모바일 등 다양한 산업에서 축적한 IT/SI 경험을 사업기획과 프로젝트 운영에 활용</li>
+            </ul>
+            <p class="case-limit">※ 현재 이력에 프로젝트 기간·팀 규모·본인 의사결정·화면 산출물·정량 결과가 없어 해당 정보는 추정해 작성하지 않았습니다.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="sub-head" style="margin-top:48px">
+      <span class="label">Leadership Evidence</span>
+      <h3>직책이 아니라 실제 책임 범위로 설명하는 리더십</h3>
+      <p>현재 이력에 기재된 직책과 담당 업무를 바탕으로 조직·사업 운영 경험을 구분했습니다.</p>
+    </div>
+    <div class="leadership-grid">
+      <article class="card">
+        <span class="label">CEO · 인사이드</span>
+        <h3>사업 전체 운영</h3>
+        <p>대표이사로서 수주, 프로젝트 수행, 인력, 손익 등 사업 운영 전반을 책임진 경력</p>
+      </article>
+      <article class="card">
+        <span class="label">DIVISION HEAD · 프레임아웃</span>
+        <h3>다수 프로젝트 운영</h3>
+        <p>Digital Innovation Group 본부장으로 PM·PO 역할과 복수 프로젝트 운영을 담당한 경력</p>
+      </article>
+      <article class="card">
+        <span class="label">TEAM LEAD · 인포인</span>
+        <h3>기획 조직 및 제조 과제</h3>
+        <p>기획팀장으로 스마트팩토리 과제 제안, 현장 조사·인터뷰, 과제 서류와 화면 기획을 수행한 경력</p>
+      </article>
+    </div>
+    <p class="case-limit" style="margin-top:14px">※ 조직별 인원수, 채용·평가 권한, 육성 사례와 조직 성과 수치는 현재 자료에 없어 별도 확인 전까지 기재하지 않았습니다.</p>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT SHOWCASE -->
+<section id="showcase">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-no">07 / 11<small>SELECTED WORKS</small></p>
+      <div>
+        <h2>실제 프로젝트 화면으로 살펴보는 <em>대표 수행 사례</em></h2>
+        <p class="showcase-intro">디지털 트윈, 로봇 운영, 수소 충전 인프라, 병원 가상환경 분야의 프로젝트 화면을 통해 서비스 구성과 주요 기능을 소개합니다.</p>
+      </div>
+    </div>
+    <div class="showcase-grid">
+      <article class="showcase-card">
+        <div class="showcase-copy">
+          <span class="showcase-kicker">01 · NATIONAL R&amp;D / ROBOTICS</span>
+          <h3>대규모 융합로봇 실증 국책사업</h3>
+          <p>다양한 로봇 운영 환경을 디지털 트윈 공간에 통합하고, 실시간 상태 모니터링과 협업 운영을 지원하는 로봇 관리 플랫폼 실증</p>
+          <ul class="showcase-points">
+            <li>로봇별 운행·충전·배터리·통신 상태 통합 모니터링</li>
+            <li>엘리베이터 연계 및 로봇 이동·업무 수행 현황 시각화</li>
+            <li>실시간 알림과 운영 KPI 기반 현황 관리</li>
+          </ul>
+        </div>
+        <div class="showcase-gallery">
+          <a href="assets/fine01.png" target="_blank" rel="noopener" aria-label="융합로봇 통합 관제 화면 크게 보기"><img src="assets/fine01.png" alt="융합로봇 실증사업 통합 관제 화면"></a>
+          <a href="assets/fine02.png" target="_blank" rel="noopener" aria-label="융합로봇 실증사업 소개 화면 크게 보기"><img src="assets/fine02.png" alt="융합로봇 실증사업 플랫폼 소개 및 기능"></a>
+        </div>
+      </article>
+
+      <article class="showcase-card">
+        <div class="showcase-copy">
+          <span class="showcase-kicker">02 · HYDROGEN / DIGITAL PLATFORM</span>
+          <h3>제주 함덕 수소충전소 디지털 플랫폼</h3>
+          <p>수소충전소의 운영 정보와 충전 설비 상태를 디지털 공간 및 대시보드로 제공하는 디지털 플랫폼 구축</p>
+          <ul class="showcase-points">
+            <li>충전소 운영 상태·운영 시간·요금 정보 제공</li>
+            <li>충전기별 사용 가능 여부와 충전 가능량 시각화</li>
+            <li>3D 기반 충전소 공간과 운영 현황 통합 제공</li>
+          </ul>
+        </div>
+        <div class="showcase-gallery">
+          <a href="assets/jeju01.png" target="_blank" rel="noopener" aria-label="제주 함덕 수소충전소 운영정보 화면 크게 보기"><img src="assets/jeju01.png" alt="제주 함덕 수소충전소 디지털 플랫폼 운영정보 화면"></a>
+          <a href="assets/jeju02.png" target="_blank" rel="noopener" aria-label="제주 함덕 수소충전소 대시보드 크게 보기"><img src="assets/jeju02.png" alt="제주 함덕 수소충전소 3D 운영 대시보드"></a>
+        </div>
+      </article>
+
+      <article class="showcase-card">
+        <div class="showcase-copy">
+          <span class="showcase-kicker">03 · HEALTHCARE / VIRTUAL ENVIRONMENT</span>
+          <h3>삼성병원 가상환경 기반 병원운영 기술개발 및 실증사업</h3>
+          <p>병원 내부 가상환경을 기반으로 방문객 안내와 주요 시설 탐색을 지원하는 디지털 병원 경험 구현</p>
+          <ul class="showcase-points">
+            <li>가상 병원 로비 및 주요 공간의 3D 환경 구현</li>
+            <li>가상 안내 도우미를 통한 병원 정보·서비스 안내</li>
+            <li>주요 시설 위치 탐색과 실내 길찾기 지원</li>
+          </ul>
+        </div>
+        <div class="showcase-gallery">
+          <a href="assets/samsung01.png" target="_blank" rel="noopener" aria-label="삼성병원 가상 안내 화면 크게 보기"><img src="assets/samsung01.png" alt="삼성병원 가상환경 안내 도우미 화면"></a>
+          <a href="assets/samsung03.png" target="_blank" rel="noopener" aria-label="삼성병원 가상 로비 화면 크게 보기"><img src="assets/samsung03.png" alt="삼성병원 가상환경 로비 및 주요 시설 안내 화면"></a>
+        </div>
+      </article>
+
+      <article class="showcase-card">
+        <div class="showcase-copy">
+          <span class="showcase-kicker">04 · PUBLIC SECTOR / DELIVERY ROBOT</span>
+          <h3>세종시청 배달로봇 커피 딜리버리 시스템 구축</h3>
+          <p>세종시청 내 카페와 사무 공간을 연결하는 비대면 커피 주문·로봇 배송 서비스 및 관제 시스템 구축</p>
+          <ul class="showcase-points">
+            <li>로봇별 실시간 위치·운행 상태 및 배송 현황 모니터링</li>
+            <li>주문·배송 상태, 엘리베이터 연계 현황 통합 관제</li>
+            <li>로봇별 배송 실적과 운영 지표 시각화</li>
+          </ul>
+        </div>
+        <div class="showcase-gallery">
+          <a href="assets/sejong01.png" target="_blank" rel="noopener" aria-label="세종시청 배달로봇 시스템 소개 화면 크게 보기"><img src="assets/sejong01.png" alt="세종시청 배달로봇 모니터링 시스템 소개"></a>
+          <a href="assets/sejong02.png" target="_blank" rel="noopener" aria-label="세종시청 배달로봇 관제 화면 크게 보기"><img src="assets/sejong02.png" alt="세종시청 배달로봇 실시간 관제 화면"></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- 05 PROJECTS -->
 <section id="projects">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">06 / 09<small>PROJECTS</small></p>
+      <p class="sec-no">08 / 11<small>PROJECTS</small></p>
       <div>
         <h2>AX의 바탕이 된 IT/SI 프로젝트 <em>28건</em></h2>
-        <p class="lead">공공기관, 대학, 금융사, 대기업, 통신사의 업무시스템·모바일·웹 구축을 맡았습니다. 시스템 연동과 데이터 구조, 사용자가 실제로 쓰는 화면을 만든 경험이 솔루션 기획의 기반입니다. 분야별로 걸러 볼 수 있습니다.</p>
+        <p class="lead">공공기관, 대학, 금융사, 대기업, 통신사의 업무시스템·모바일·웹 프로젝트를 수행했습니다. 다양한 산업과 고객을 경험하며 쌓은 기획·조율·프로젝트 관리 역량을 확인할 수 있습니다. 분야별로 걸러 볼 수 있습니다.</p>
       </div>
     </div>
     <div class="filters" role="group" aria-label="분야 선택" id="filters"></div>
@@ -716,7 +966,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="career">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">07 / 09<small>CAREER</small></p>
+      <p class="sec-no">09 / 11<small>CAREER</small></p>
       <div>
         <h2>경력 <em>간트 차트</em> 2006–2026</h2>
         <p class="lead">마케팅·콘텐츠 기획으로 시작해 서비스기획, PM, 경영 임원, 본부장을 거쳐 제조 분야 기획으로 넓혀 온 흐름입니다. 다이아몬드는 역할이 바뀐 전환점입니다.</p>
@@ -740,7 +990,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="tools">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">08 / 09<small>TOOLS &amp; AI</small></p>
+      <p class="sec-no">10 / 11<small>TOOLS &amp; AI</small></p>
       <div>
         <h2>AX를 기획하려면 <em>AI를 직접</em> 써 봐야 합니다</h2>
         <p class="lead">관리만 하는 PM이 아니라, 결과물이 어떻게 만들어지는지 손으로 아는 PM입니다. AI가 무엇을 잘하고 어디서 틀리는지 직접 써 보며 알기 때문에, 제조 현장에 AI를 붙일 자리를 현실적으로 판단합니다.</p>
@@ -752,7 +1002,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
         <div class="chain" aria-label="직접 수행 범위">
           <span>기획</span><i>→</i><span>디자인</span><i>→</i><span>퍼블리싱</span><i>→</i><span>개발</span><i>→</i><span class="ai">AI로 검증·가속</span>
         </div>
-        <p>웹사이트 제작에서 디자인, 퍼블리싱, 개발까지 전 과정을 직접 해 본 경험이 있습니다. 최근에는 생성형 AI와 AI 기반 개발 도구로 웹사이트와 소프트웨어 개발의 속도를 높이고, 기획부터 결과물 검증까지 혼자 다룰 수 있는 범위를 넓히고 있습니다.</p>
+        <p>개인 포트폴리오 웹사이트를 직접 기획·디자인하고 HTML/CSS/JavaScript로 퍼블리싱·개발해 GitHub Pages에 배포했습니다. 생성형 AI는 코드 초안 작성, 오류 원인 탐색, 문구·구조 개선에 활용하고, 최종 화면과 링크·기능은 직접 확인하는 방식으로 사용합니다.</p>
       </div>
       <div class="card">
         <span class="label">AI Toolset</span>
@@ -762,7 +1012,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
           <div>Gemini<small>리서치·분석</small></div>
           <div>ChatGPT<small>아이디어·초안 작성</small></div>
         </div>
-        <p style="margin-top:16px">기획 문서 작성부터 리서치, 실제 웹사이트 개발과 결과물 검증까지 AI 도구를 실무에 직접 쓰고 있습니다. 이 감각으로 제조 현장의 문서·보고·데이터 분석 업무 가운데 생성형 AI가 효과를 낼 지점을 찾습니다.</p>
+        <p style="margin-top:16px">AI 활용 결과는 초안 생성 자체보다 실제 사용 가능한 결과물과 검증 과정으로 판단합니다. 현재 확인 가능한 사례는 포트폴리오 웹사이트의 기획·구현·배포이며, 업무 시간 단축률 등 정량 효과는 측정 자료가 없어 제시하지 않습니다.</p>
       </div>
     </div>
   </div>
@@ -772,7 +1022,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
 <section id="credentials">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-no">09 / 09<small>CREDENTIALS</small></p>
+      <p class="sec-no">11 / 11<small>CREDENTIALS</small></p>
       <div><h2>학력 및 자격</h2></div>
     </div>
     <div class="creds">
@@ -801,13 +1051,13 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
   <div class="wrap">
     <div>
       <p class="sec-no" style="margin-bottom:16px;color:#5BC0E8">NEXT PROJECT</p>
-      <h2>다음 <em>솔루션</em>의<br>기획부터 출시까지 함께 맡겠습니다</h2>
-      <p class="lead">솔루션 기획, 제조 AX·스마트팩토리 사업기획, 국책 R&amp;D PM 포지션에 대한 연락을 기다립니다.</p>
+      <h2>사업의 방향 설정부터<br><em>실행과 성과</em>까지 함께하겠습니다</h2>
+      <p class="lead">전략기획·사업기획, 경영·사업 운영, 프로젝트 총괄 PM, 국책 R&amp;D 사업관리 및 제조 디지털전환 관련 포지션을 검토하고 있습니다.</p>
       <a class="mail" href="mailto:beronim@naver.com">beronim@naver.com</a>
       <button class="copy-btn" id="copyBtn" type="button">주소 복사</button>
     </div>
     <dl class="cond">
-      <div><dt>희망 직무</dt><dd>솔루션·서비스 기획 리더, 제조 AX 사업기획·PM, 국책 R&amp;D 사업관리</dd></div>
+      <div><dt>희망 직무</dt><dd>전략기획·사업기획, 기획팀장, 사업·프로젝트 총괄 PM, 국책 R&amp;D 사업관리</dd></div>
       <div><dt>산업</dt><dd>제조 AI·AX, 디지털 트윈, 스마트팩토리, IT/SI</dd></div>
       <div><dt>고용 형태</dt><dd>정규직 · 프리랜서 · 헤드헌팅</dd></div>
       <div><dt>근무지</dt><dd>서울 전 지역</dd></div>
@@ -815,7 +1065,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span>© 2026 배현종</span><span>Solution Planning · Manufacturing AX · National R&amp;D · PM</span></div></footer>
+<footer><div class="wrap"><span>© 2026 배현종</span><span>Business Strategy · Project Management · Leadership · Digital Transformation</span></div></footer>
 
 <script>
 (function(){
